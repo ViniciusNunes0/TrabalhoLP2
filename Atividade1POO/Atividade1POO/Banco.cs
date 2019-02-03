@@ -14,7 +14,7 @@ public class Banco
         agencias.Add(a);
         Console.WriteLine("Agência " + a.idAgencia + " criada com sucesso!");
         Console.WriteLine("Numero de agencias: " + agencias.Count);
-    }       
+    }
 
     public List<Agencia> Agencias { get; }
 
@@ -42,5 +42,4 @@ public class Banco
             Console.WriteLine("Agencia = " + agencia.idAgencia);
         }
     }
-
 }
