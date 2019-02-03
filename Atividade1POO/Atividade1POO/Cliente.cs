@@ -2,7 +2,5 @@
 
 public class Cliente
 {
-	public Cliente()
-	{
-	}
+    public string nome { get; set; }
 }
