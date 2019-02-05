@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace Atividade1POO
-{
+{ 
     class Program
     {
         public const decimal Juros = 0.6M;
