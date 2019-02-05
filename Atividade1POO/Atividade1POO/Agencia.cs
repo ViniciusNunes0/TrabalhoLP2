@@ -13,13 +13,17 @@ public class Agencia
     public void AdicionarContaCorrente(ContaCorrente cc)
     {
         contasCorrente.Add(cc);
+        Console.WriteLine("************************************");
         Console.WriteLine("Conta " + cc.Id + " de titular " + cc.Titular + " criada com sucesso!");
+        Console.WriteLine("************************************");
     }
 
     public void AdicionarContaPoupanca(ContaPoupanca cp)
     {
         contasPoupanca.Add(cp);
+        Console.WriteLine("************************************");
         Console.WriteLine("Conta " + cp.Id + " de titular " + cp.Titular + " criada com sucesso!");
+        Console.WriteLine("************************************");
     }
 
     public ContaCorrente getCCorrente(int num)
@@ -36,8 +40,6 @@ public class Agencia
 
         Console.WriteLine("A conta não está cadastrada! Verifique seu número!");
         return null;
-
-
 
     }
     public ContaPoupanca getCPoupanca(int num)

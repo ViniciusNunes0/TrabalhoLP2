@@ -12,8 +12,9 @@ public class Banco
     public void AdicionarAgencia(Agencia a)
     {
         agencias.Add(a);
+        Console.WriteLine("**********************************");
         Console.WriteLine("Agência " + a.idAgencia + " criada com sucesso!");
-        Console.WriteLine("Numero de agencias: " + agencias.Count);
+        Console.WriteLine("**********************************");
     }
 
     public List<Agencia> Agencias { get; }
@@ -31,8 +32,6 @@ public class Banco
         }
         Console.WriteLine("A agência digitada não exite, por favor, verifique se o ID está correto:");
         return null;
-
-
     }
 
     public void listaIdAgencias()

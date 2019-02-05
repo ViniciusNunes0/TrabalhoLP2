@@ -8,7 +8,7 @@ public class Solicitacoes
         Console.WriteLine("Digite o Id da agência: ");
         int numAgencia = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("Digite o tipo da conta: 1 - Corrente/ 2 - Poupança");
+        Console.WriteLine("Digite o tipo da conta: 1 - Corrente / 2 - Poupança");
         int tipoConta = int.Parse(Console.ReadLine());
 
         if (tipoConta == 1)
@@ -29,7 +29,7 @@ public class Solicitacoes
             }
 
             Console.WriteLine("O que deseja realizar: ");
-            Console.WriteLine("1 - Consultar Saldo /n 2 - Sacar /n 3 -  Depositar");
+            Console.WriteLine(" 1 - Consultar Saldo \n 2 - Sacar \n 3 - Depositar");
 
             int operacao = int.Parse(Console.ReadLine());
 
@@ -45,6 +45,7 @@ public class Solicitacoes
             {
                 Console.WriteLine("SAQUE");
                 Console.WriteLine("Digite o valor para saque: ");
+                Console.Write("R$ ");
                 decimal saque = decimal.Parse(Console.ReadLine());
 
                 if (cc.Saldo < saque)
@@ -54,6 +55,7 @@ public class Solicitacoes
                 else
                 {
                     cc.Sacar(saque);
+                    Console.WriteLine("Transação Concluida com Sucesso!");
                 }
 
             }
@@ -61,7 +63,9 @@ public class Solicitacoes
             {
                 Console.WriteLine("DEPÓSITO");
                 Console.WriteLine("Digite o valor para depositar: ");
+                Console.Write("R$ ");
                 cc.Depositar(decimal.Parse(Console.ReadLine()));
+                Console.WriteLine("Transação Concluida com Sucesso!");
             }
         }
         else if (tipoConta == 2)
@@ -80,7 +84,7 @@ public class Solicitacoes
             }
 
             Console.WriteLine("O que deseja realizar: ");
-            Console.WriteLine("1 - Consultar Saldo /n 2 - Sacar /n 3 -  Depositar");
+            Console.WriteLine(" 1 - Consultar Saldo \n 2 - Sacar \n 3 -  Depositar");
             int operacao = int.Parse(Console.ReadLine());
 
             if (operacao == 1)
@@ -95,6 +99,7 @@ public class Solicitacoes
             {
                 Console.WriteLine("SAQUE");
                 Console.WriteLine("Digite o valor para saque: ");
+                Console.Write("R$ ");
                 decimal saque = decimal.Parse(Console.ReadLine());
 
                 if (cp.Saldo < saque)
@@ -104,13 +109,16 @@ public class Solicitacoes
                 else
                 {
                     cp.Sacar(saque);
+                    Console.WriteLine("Transação Concluida com Sucesso!");
                 }
             }
             else if (operacao == 3)
             {
                 Console.WriteLine("DEPÓSITO");
                 Console.WriteLine("Digite o valor para depositar: ");
+                Console.Write("R$ ");
                 cp.Depositar(decimal.Parse(Console.ReadLine()));
+                Console.WriteLine("Transação Concluida com Sucesso!");
             }
         }
     }

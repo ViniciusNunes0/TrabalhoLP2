@@ -17,15 +17,16 @@ namespace Atividade1POO
 
             while (true)
             {
-                banco.listaIdAgencias();
-
+                
                 Console.WriteLine("---------------------------");
                 Console.WriteLine("1 - Cadastrar Agência");
                 Console.WriteLine("2 - Criar Conta");
                 Console.WriteLine("3 - Abrir uma Sessão");
+                Console.WriteLine("4 - Listar Agências");
                 Console.WriteLine("0 - Sair");
                 Console.WriteLine("---------------------------");
 
+                Console.Write("Escolha uma opção: ");
                 op = int.Parse(Console.ReadLine());
 
                 if (op == 1)
@@ -94,6 +95,10 @@ namespace Atividade1POO
                     Solicitacoes solicitacao = new Solicitacoes();
                     solicitacao.realizarSolicitacao(banco);
 
+                }
+                else if (op == 4)
+                {
+                    banco.listaIdAgencias();
                 }
                 else if (op == 0)
                 {
